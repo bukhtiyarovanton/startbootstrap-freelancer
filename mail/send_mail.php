@@ -36,10 +36,11 @@ if ($curl = curl_init()) {
 	curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
 	
-	curl_exec($curl);
+	echo curl_exec($curl);
 	curl_close();
 	
 	return true;
 }
+echo "email not sent";
 return false;
 ?>
