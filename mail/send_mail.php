@@ -1,13 +1,5 @@
 <?php
 
-error_reporting(E_ALL); 
-ini_set("display_errors", 1); 
-
-echo "name: "; echo $_POST['name']";
-echo "email: $_POST['email']\n";
-echo "phone: $_POST['phone']\n";
-echo "message: $_POST['message']\n";
-
 // Check for empty fields
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -49,5 +41,5 @@ if ($curl = curl_init()) {
 	
 	return true;
 }
-
+return false;
 ?>
