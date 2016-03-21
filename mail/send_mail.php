@@ -1,9 +1,9 @@
 <?php
-echo $_POST['name'];
-echo $_POST['email'];
-echo $_POST['phone'];
-echo $_POST['message'];
-echo filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
+echo "name: $_POST['name']\n";
+echo "email: $_POST['email']\n";
+echo "phone: $_POST['phone']\n";
+echo "message: $_POST['message']\n";
+
 // Check for empty fields
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
