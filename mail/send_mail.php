@@ -31,7 +31,7 @@ if ($curl = curl_init()) {
 		'text'    => $email_body
 	];
 	curl_setopt($curl, CURLOPT_USERPWD, "api:key-91e878ac7382705078e0926b4c38e286");  
-	curl_setopt($curl, CURLOPT_URL, "https://api.mailgun.net/v3/mg.antonbukhtiyarov.ru/messages");
+	curl_setopt($curl, CURLOPT_URL, "https://api.mailgun.net/v3/antonbukhtiyarov.ru/messages");
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
