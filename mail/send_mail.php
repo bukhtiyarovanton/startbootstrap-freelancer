@@ -3,7 +3,7 @@
 error_reporting(E_ALL); 
 ini_set("display_errors", 1); 
 
-echo "name: $_POST['name']\n";
+echo "name: "; echo $_POST['name']";
 echo "email: $_POST['email']\n";
 echo "phone: $_POST['phone']\n";
 echo "message: $_POST['message']\n";
