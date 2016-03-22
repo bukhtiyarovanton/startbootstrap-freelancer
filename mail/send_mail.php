@@ -20,8 +20,10 @@ $vin = strip_tags(htmlspecialchars($_POST['vin']));
 	
 // Create the email and send the message
 $to = 'bukhtiyarov.anton@gmail.com';//,anton.gomzyakov2015@yandex.ru'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Автозапчасти Кемерово - Новый запрос от $name.";
-$email_body = "Запрос от : $name\n\nЭл. почта: $email_address\n\nТелефон: $phone\n\nЗапрос:\n$message\n\nИнформация об автомобиле: vin\n\n";
+$email_subject = mb_convert_encoding ("Автозапчасти Кемерово - Новый запрос от $name." ,"UTF-8" , "Windows-1251" );
+$email_body = mb_convert_encoding ("Запрос от : $name\n\nЭл. почта: $email_address\n\nТелефон: $phone\n\nЗапрос:\n$message\n\nИнформация об автомобиле: vin\n\n",
+									"UTF-8" , 
+									"Windows-1251";
 
 if ($curl = curl_init()) {
 	$post = [
