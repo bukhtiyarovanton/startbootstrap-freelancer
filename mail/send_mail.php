@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 
 // Check for empty fields
 if(empty($_POST['name'])  		||
@@ -20,10 +20,8 @@ $vin = strip_tags(htmlspecialchars($_POST['vin']));
 	
 // Create the email and send the message
 $to = 'bukhtiyarov.anton@gmail.com';//,anton.gomzyakov2015@yandex.ru'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = mb_convert_encoding ("Àâòîçàï÷àñòè Êåìåðîâî - Íîâûé çàïðîñ îò $name." ,"UTF-8" , "Windows-1251" );
-$email_body = mb_convert_encoding ("Çàïðîñ îò : $name\n\nÝë. ïî÷òà: $email_address\n\nÒåëåôîí: $phone\n\nÇàïðîñ:\n$message\n\nÈíôîðìàöèÿ îá àâòîìîáèëå: vin\n\n",
-									"UTF-8" , 
-									"Windows-1251";
+$email_subject = "ÐÐ²Ñ‚Ð¾Ð·Ð°Ð¿Ñ‡Ð°ÑÑ‚Ð¸ ÐšÐµÐ¼ÐµÑ€Ð¾Ð²Ð¾ - ÐÐ¾Ð²Ñ‹Ð¹ Ð·Ð°Ð¿Ñ€Ð¾Ñ Ð¾Ñ‚ $name.";
+$email_body = "Ð—Ð°Ð¿Ñ€Ð¾Ñ Ð¾Ñ‚ : $name\n\nÐ­Ð». Ð¿Ð¾Ñ‡Ñ‚Ð°: $email_address\n\nÐ¢ÐµÐ»ÐµÑ„Ð¾Ð½: $phone\n\nÐ—Ð°Ð¿Ñ€Ð¾Ñ:\n$message\n\nÐ˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾Ð± Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ðµ: vin\n\n";
 
 if ($curl = curl_init()) {
 	$post = [
