@@ -19,7 +19,7 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 $vin = strip_tags(htmlspecialchars($_POST['vin']));
 	
 // Create the email and send the message
-$to = 'bukhtiyarov.anton@gmail.com';//,anton.gomzyakov2015@yandex.ru'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$to = 'bukhtiyarov.anton@gmail.com,anton.gomzyakov2015@yandex.ru'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "Автозапчасти Кемерово - Новый запрос от $name.";
 $email_body = "Запрос от : $name\n\nЭл. почта: $email_address\n\nТелефон: $phone\n\nЗапрос:\n$message\n\nИнформация об автомобиле: $vin\n\n";
 
